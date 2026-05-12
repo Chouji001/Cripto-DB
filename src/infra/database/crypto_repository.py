@@ -50,3 +50,18 @@ class CryptoRepository:
         connection.close()
 
         print("Cripto salva com sucesso!")
+
+    def get_all(self):
+        connection = get_connection()
+        cursor = connection.cursor()
+
+        query = "SELECT * FROM crypto_market_history"
+
+        cursor.execute(query)
+
+        results = cursor.fetchall()
+
+        cursor.close()
+        connection.close()
+
+        return results
