@@ -1,4 +1,4 @@
-from src.infra.database.conections import get_connection
+from src.infra.database.connections import get_connection
 
 
 class CryptoRepository:
@@ -12,7 +12,7 @@ class CryptoRepository:
         market_cap: float,
         total_volume: float,
         price_change_percentage_24h: float,
-        last_updated
+        last_updated: str
     ):
         connection = get_connection()
         cursor = connection.cursor()

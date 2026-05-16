@@ -1,7 +1,7 @@
 import streamlit as st
 import plotly.express as px
 
-from src.use_cases.streamlit.crypto_dashboard import GetCryptoDashboardData
+from src.use_cases.streamlit.dashboard import GetCryptoDashboardData
 
 
 st.set_page_config(

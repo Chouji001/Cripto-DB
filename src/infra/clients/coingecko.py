@@ -1,4 +1,4 @@
-from src.utils.env import Env
+from src.utils.env import get_connection
 import requests
 
 
@@ -6,7 +6,7 @@ import requests
 class CoinGeckoClient:
 
     def __init__(self):
-        self.BASE_URL = Env.BASE_URL
+        self.BASE_URL = get_connection().BASE_URL
 
 
     def get_market_data(self):

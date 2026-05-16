@@ -7,8 +7,8 @@ def main():
     while True:
         print("Iniciando coleta...")
         caller.run()
-        print("Próxima coleta em 10 minutos...")
-        time.sleep(600)
+        print("Próxima coleta em 30 minutos...")
+        time.sleep(1800)
 
 if __name__ == "__main__":
     main()

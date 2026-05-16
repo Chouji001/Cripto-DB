@@ -1,5 +1,5 @@
-from src.infra.clients.coingecko_client import CoinGeckoClient
-from src.infra.database.crypto_repository import CryptoRepository
+from src.infra.clients.coingecko import CoinGeckoClient
+from src.infra.database.repository import CryptoRepository
 
 class Caller:
 
@@ -9,7 +9,11 @@ class Caller:
 
 
     def run(self):
-        market_data = self.client.get_market_data()
+        try:
+            market_data = self.client.get_market_data()
+        except Exception as e:
+            print(f"Erro ao obter dados do CoinGecko: {e}")
+            pass
 
         for item in market_data:
 

@@ -1,6 +1,6 @@
 import pandas as pd
 
-from src.infra.database.crypto_repository import CryptoRepository
+from src.infra.database.repository import CryptoRepository
 
 
 class GetCryptoDashboardData:
